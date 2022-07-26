@@ -1,0 +1,25 @@
+Dar o: npx create-react-app <nome da aplicação> --template typescript
+
+2:Removendo arquivos desnecessários: remover comentários do index.html, a tag <noscript> avisa ao usuário ligar o JS no navegador
+
+3: Em package.json  criar devDependencies e transferir @testing ,@types, react-scripts e typescript de Dependencies pra devDependencies fazemos isso pra separar dependencias de produçao e dependencias de desenvolvimento
+
+4:Remover: app.css, ap.teste.tsx, index.css, logo.svg, em seguida excluir os imports dos arquivos deletados
+
+5:EM App.tsx substituir function app por uma arrow Function e apagar o export App. No index.tsx apagar o import app e na tag App dar um Ctrl + space ele irá sujerir o novo local import
+
+6: Criar dentro de src a pasta app depois jogar o arquivo App.tsx dentro dela, em seguida criar pasta pages e a pasta routes e pasta shared dentro de app.
+
+7: dentro da pasta shared tera todos os arquivos compartilhados da aplicação, sendo assim crio dentro dela: components, contexts, hooks, services. e dentro de cada uma delas eu crio um index.ts com um export vazio dentro. export {}. 
+OBS: na pasta routs criar index.tsx
+
+8: instalar o paaocte de tipagem react-router-dom:
+npm i -D @types/react-router-dom
+
+9: Dentro de index.tsx importar BrowserRouter, Routes , Route, Navigator
+
+10:no return apliar <BrowserRouter> <Router> e <Route path="/" element={}> com a rota desejada. como teste criei um <h1>teste</h1> pra ver o retorno importando a função <Rts/>
+
+11: criei uma pasta dashboard dentro de pages e um arquivo Dashboard.tsx dentro dela, adicionei uma função com export com um <p> dentro depois em index.tsx add esse componete na Route "/home"
+
+12: Em index.tsx adicionei o modulo Navigate, depois chamei  pra caso uma rota inexistente seja chamada ele redirecione  pra página home : <Route path='*' element={<Navigate to="/home"/>}/>
