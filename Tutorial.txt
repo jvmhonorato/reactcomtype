@@ -23,3 +23,9 @@ npm i -D @types/react-router-dom
 11: criei uma pasta dashboard dentro de pages e um arquivo Dashboard.tsx dentro dela, adicionei uma função com export com um <p> dentro depois em index.tsx add esse componete na Route "/home"
 
 12: Em index.tsx adicionei o modulo Navigate, depois chamei  pra caso uma rota inexistente seja chamada ele redirecione  pra página home : <Route path='*' element={<Navigate to="/home"/>}/>
+
+13: Criamos uma pasta login em pages com o Login.tsx dentro crimaos um componente e exportamos no index.tsx da pasta pages, depois crimaos uma rota /login em index.txs da pasta routes
+
+14: Em Dashboard.tsx importamos o modulo Link e chamamos o modulo com a rota /login pra ter um Link na tela pra direcionar
+
+15 outra forma seria usando o useNavigate, em Login.tsx. Basta importar ele e estanciar em uma const "navigate",  em seguida criar uma função com "navigate('/rota')" e depois chamar a função no evento onclick={} do button
