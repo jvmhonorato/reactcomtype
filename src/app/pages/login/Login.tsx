@@ -1,9 +1,18 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
 export const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    useEffect(()=>{
+        console.log(email)
+    },[email])
+
+    useEffect(()=>{
+       
+        console.log(password)
+    },[password])
 
     const handleEnter = () => {
        // alert(email)
@@ -29,8 +38,8 @@ export const Login = () => {
                  value={password} 
                 onChange={e => setPassword(e.target.value)}/>
             </label>
-            <button type="button" onClick={handleEnter}>
-                Entrar
+                <button type="button" onClick={handleEnter}>
+                 Entrar
                 </button>
         </form>
 

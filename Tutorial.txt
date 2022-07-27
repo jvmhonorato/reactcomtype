@@ -33,6 +33,8 @@ npm i -D @types/react-router-dom
 16: Em Login depois de apagar os exemplos da aula anterior, criamos tags <form> <label> <span> <input> pr email e password e o <button>
 depois criamos função pra ser chamada no evento onClick do button
 
-17: importamos o modulo useState() e  crimaos um state email e passamos esse state no input do email pra capturar os valores, depois com o evento onClick pegamos executamos a função handleEnter
+17: importamos o modulo useState() e  criamos um state email e passamos esse state no input do email pra capturar os valores, depois com o evento onClick pegamos executamos a função handleEnter
 
 8: Aplico a mesma logica com o uso de state pra o password 
+
+9:Aplicamos o useEffect({},[]) pra impedir que o bloco de codigo dentro dele seja carregado mais de uma vez. passar array como segundo parâmetro
