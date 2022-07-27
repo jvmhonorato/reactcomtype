@@ -42,3 +42,5 @@ depois criamos função pra ser chamada no evento onClick do button
 10:criei uma tag <p>com  a quantidae de caracteres de email com {email.length}. depois importamos o useMemo(()=>{},[]) que é obrigatorio ter dois parâmetros  no caso uma função e um array.
 a função retora o calculo no caso o satate email.length * 10 e no array a propria dependencia email.length.
 OBS: só passar a dependencia pra segundo parâmetro que estiver no return da function
+
+11: Aplicando o useCallback na função handleEnter passando os log que retornarão no console mas inserindo o segundo parãmetro no arrays de dependencias que é o email, password pois ambos estão no contexto na função. OBS: caso haja states no callback é crucial passar as depêndecias no array do segundo parâmetro

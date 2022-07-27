@@ -1,3 +1,4 @@
+import { useCallback } from "react"
 import { useState, useEffect, useMemo } from "react"
 
 
@@ -11,13 +12,13 @@ export const Login = () => {
         
     },[email.length])
 
-    const handleEnter = () => {
-       // alert(email)
-       // alert(password)
-        console.log(email)
-        console.log(password)
-    }
-  
+    const handleEnter = useCallback(() => {
+        // alert(email)
+        // alert(password)
+         console.log(email)
+         console.log(password)
+     },[email, password]);
+   
     return(
     <>
     <div>
