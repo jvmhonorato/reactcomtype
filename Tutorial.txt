@@ -29,3 +29,10 @@ npm i -D @types/react-router-dom
 14: Em Dashboard.tsx importamos o modulo Link e chamamos o modulo com a rota /login pra ter um Link na tela pra direcionar
 
 15 outra forma seria usando o useNavigate, em Login.tsx. Basta importar ele e estanciar em uma const "navigate",  em seguida criar uma função com "navigate('/rota')" e depois chamar a função no evento onclick={} do button
+
+16: Em Login depois de apagar os exemplos da aula anterior, criamos tags <form> <label> <span> <input> pr email e password e o <button>
+depois criamos função pra ser chamada no evento onClick do button
+
+17: importamos o modulo useState() e  crimaos um state email e passamos esse state no input do email pra capturar os valores, depois com o evento onClick pegamos executamos a função handleEnter
+
+8: Aplico a mesma logica com o uso de state pra o password 
