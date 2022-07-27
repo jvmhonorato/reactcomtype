@@ -37,4 +37,8 @@ depois criamos função pra ser chamada no evento onClick do button
 
 8: Aplico a mesma logica com o uso de state pra o password 
 
-9:Aplicamos o useEffect({},[]) pra impedir que o bloco de codigo dentro dele seja carregado mais de uma vez. passar array como segundo parâmetro
+9:Aplicamos o useEffect({},[]) pra impedir que o bloco de codigo dentro dele seja carregado mais de uma vez. passar array como segundo parâmetro que serve pra renderizar o valor a medida que é passado
+
+10:criei uma tag <p>com  a quantidae de caracteres de email com {email.length}. depois importamos o useMemo(()=>{},[]) que é obrigatorio ter dois parâmetros  no caso uma função e um array.
+a função retora o calculo no caso o satate email.length * 10 e no array a propria dependencia email.length.
+OBS: só passar a dependencia pra segundo parâmetro que estiver no return da function
