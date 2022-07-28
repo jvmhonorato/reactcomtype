@@ -44,3 +44,5 @@ a função retora o calculo no caso o satate email.length * 10 e no array a prop
 OBS: só passar a dependencia pra segundo parâmetro que estiver no return da function
 
 11: Aplicando o useCallback na função handleEnter passando os log que retornarão no console mas inserindo o segundo parãmetro no arrays de dependencias que é o email, password pois ambos estão no contexto na função. OBS: caso haja states no callback é crucial passar as depêndecias no array do segundo parâmetro
+
+11: useRef não precisa de array de dependencia, crio uma estância com useRef<HTMLInputElement>(null) depois jogo essa vonst como ref={} no <input> ou seja useRef serve pra pegar a referencia do nosso html e usar dentro de um callBack ou uma função, No campo INput email add onKeyDown={e => e.key ==='Enter' ? inputPasswordRef.current?.focus() : undefined} pra pular pro campo senha quando der Enter

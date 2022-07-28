@@ -1,8 +1,12 @@
-import { useCallback } from "react"
+import { useCallback, useRef } from "react"
 import { useState, useEffect, useMemo } from "react"
 
 
+
 export const Login = () => {
+    //vou entanciar o valor 
+const inputPasswordRef = useRef<HTMLInputElement>(null)
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -17,6 +21,9 @@ export const Login = () => {
         // alert(password)
          console.log(email)
          console.log(password)
+         if (inputPasswordRef.current !== null){
+         inputPasswordRef.current.focus()
+        }
      },[email, password]);
    
     return(
@@ -29,6 +36,8 @@ export const Login = () => {
                 <input 
                 value={email} 
                 onChange={e => setEmail(e.target.value)}
+                onKeyDown={e => e.key ==='Enter' ? inputPasswordRef.current?.focus() : undefined}
+                
                 />
             </label>
             <label>
@@ -36,6 +45,7 @@ export const Login = () => {
                 <input 
                 type="password"
                  value={password} 
+                 ref={inputPasswordRef}
                 onChange={e => setPassword(e.target.value)}/>
             </label>
                 <button type="button" onClick={handleEnter}>
