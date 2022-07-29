@@ -49,3 +49,7 @@ OBS: só passar a dependencia pra segundo parâmetro que estiver no return da fu
 
 12: Em Dashboard.tsx importamos o useRef e criamos uma const ccounteRef = useRef({countet: 0}) dessa vez com um objeto ao invers de null sem um parãmetro de tipagem pois ela já é automatica.
 o useRef serve tambem pra criar um fluxo de dados sem que precise renderizar
+
+13: Criei em pages pasta components com InputLogin.tsx dentro transferi o código pra lá depois importei de volta. Pra tornar o componete dinãmico com TS: cria uma interface  atribui ela a função do componente logo apos a React.FC<> passa o props como parâmetro.
+substituir o state email por props.label e o setEmail por props.onChange, e por ultimo o inputPasswordRef.current.focus() por props .onPressEnter todos esse foram atribuído no bloco interface.
+adicionar type? tambem de forma  opcional 
