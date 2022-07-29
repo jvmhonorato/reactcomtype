@@ -55,3 +55,10 @@ substituir o state email por props.label e o setEmail por props.onChange, e por 
 adicionar type? tambem de forma  opcional 
 
 14:Passando useRef dinâmicamente usando o fowardRef: No compoente InputLogin.tsx importar o react envoler a função em parêntese com o React.fowardRef passa o ref como segundo parâmetro depois de props em seguida removo o React.FC<>  e incluo a inteface IInputLoginProps como segundo parâmetro depois de <HTMLInputElement, IInputLoginProps>
+
+15:criei em components  o componente ButtonLogin.tsx e nele transferi <button> depois chamei ele de volta importando <ButtonLogin/> pra passar as propriedades faz a mesmacoisa do Login cria uma interface passa ela ligada ao React.FC<nomeInterface>
+passa o props ou o nome dos eventos dentro do objeto({}) fica a critério. OBS: o type tem que associar a :"button"|"submit"|"reset"
+pq se não nao funciona.
+pra deixa o nome do button dinâmico passar o children sempre dentro da interface  e depois chamar essa interface no React.FC:
+EX: interface childrenIterface{ children: React.ReactNode;}
+export const Component: React.FC<childrenIterface> = ({children}) 

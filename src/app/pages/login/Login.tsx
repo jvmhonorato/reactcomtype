@@ -1,5 +1,6 @@
 import { useCallback, useRef } from "react"
 import { useState, useEffect, useMemo } from "react"
+import { ButtonLogin } from "./components/ButtonLogin"
 import { InputLogin } from "./components/InputLogin"
 
 
@@ -12,7 +13,7 @@ const inputPasswordRef = useRef<HTMLInputElement>(null)
     const [password, setPassword] = useState('')
 
     const emailLength = useMemo(()=>{
-        console.log('Execute')
+        
         return email.length * 10
         
     },[email.length])
@@ -48,17 +49,11 @@ const inputPasswordRef = useRef<HTMLInputElement>(null)
          
          />
            
-            {/*<label>
-                <span>Senha</span>
-                <input 
-                type="password"
-                 value={password} 
-                 ref={inputPasswordRef}
-                onChange={e => setPassword(e.target.value)}/>
-                </label>*/}
-                <button type="button" onClick={handleEnter}>
-                 Entrar
-                </button>
+        
+                
+                <ButtonLogin type="button" onClick={handleEnter}>
+                Enter
+                </ButtonLogin>
         </form>
 
 
