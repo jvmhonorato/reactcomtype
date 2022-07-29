@@ -33,6 +33,7 @@ const inputPasswordRef = useRef<HTMLInputElement>(null)
         <form>
          <p>Quantidade de caracteres do email: {emailLength}</p>
          <InputLogin
+         
          label="Email"
          value={email}
          onChange={newValue => setEmail(newValue)}
@@ -42,6 +43,7 @@ const inputPasswordRef = useRef<HTMLInputElement>(null)
          label="senha"
          value={password}
          type="password"
+         ref={inputPasswordRef}
          onChange={newValue => setPassword(newValue)}
          
          />
