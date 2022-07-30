@@ -62,3 +62,10 @@ pq se não nao funciona.
 pra deixa o nome do button dinâmico passar o children sempre dentro da interface  e depois chamar essa interface no React.FC:
 EX: interface childrenIterface{ children: React.ReactNode;}
 export const Component: React.FC<childrenIterface> = ({children}) 
+
+16:Na pasta contexts criei um file chamado UserLog.tsx que servirá pra mostrar o usuario logado em todas as páginas da aplicação,
+inserir de forma estanciada o createContext()
+depois crio um componente  export, e no return insiro com a const criada no modelo componente com o value={} obrigatório
+criei uma interface passei o objeto useName: string depois chamei a interface no sreateContext e passei um hack no parâmetro para ele para de reclama  de objeto vazio , criei uma interface independente pra o children: React.ReactNode; e passei ela no React.FC<> da função componente
+
+17:Em seguida em App.tsx eu envolvo o componente de rotas <Rts/> com o componente context <UserLogProvider>

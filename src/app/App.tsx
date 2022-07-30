@@ -1,13 +1,16 @@
 import { Rts } from "./routes";
+import { UserLogProvider } from "./shared/contexts/UserLog";
 
 
 
 
 export const  App = () => {
   return (
-    <div className="App">
-   <Rts/>
-    </div>
+    
+   <UserLogProvider>
+    <Rts/>
+    </UserLogProvider>
+    
   );
 }
 
