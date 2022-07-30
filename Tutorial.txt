@@ -69,3 +69,9 @@ depois crio um componente  export, e no return insiro com a const criada no mode
 criei uma interface passei o objeto useName: string depois chamei a interface no sreateContext e passei um hack no parâmetro para ele para de reclama  de objeto vazio , criei uma interface independente pra o children: React.ReactNode; e passei ela no React.FC<> da função componente
 
 17:Em seguida em App.tsx eu envolvo o componente de rotas <Rts/> com o componente context <UserLogProvider>
+
+18: Dando seguimento, pra compartilhar o que foi criado: dou export nas const que estancia o createContext, depois em outro compoonete com o Dashboard.tsx e importo essa cont e estancio ela com useContext depois eu chamo essa constante no return <p>{userLogContext.userName}</p> userName que é o objeto atribuído do componente original como o valor 'Victor'
+faço o mesmo processo no componente Login importo o modulo useContext, depois importo a const que armazena o createContex no componete pai depois estancio elea em uma const e essa const eu chamo no return<p>{userLogContext.userName}</p> com o objeto declarado no valor ou posso desestruturar :
+ const {userName} = useContext(UserLogContext)
+  ao inves de assim: 
+   const userLogContext = useContext(UserLogContext) e na chamada assim: <p>{userName}</p> ao invez de assim: <p>{userLogContext.userName}</p>

@@ -1,6 +1,8 @@
 
-import { useRef } from "react"
+import { useContext, useRef } from "react"
 import { Link } from "react-router-dom"
+
+import { UserLogContext } from "../../shared/contexts/UserLog"
 
 
 
@@ -8,8 +10,11 @@ import { Link } from "react-router-dom"
 export const Dashboard = () => {
     const counterRef = useRef({counter: 0})
 
+
+    const userLogContext = useContext(UserLogContext)
     return (<div>
         <h1>Dashboard</h1>
+        <p>{userLogContext.userName}</p>
         <p>Contador: {counterRef.current.counter}</p>
 
         <button onClick={() => counterRef.current.counter++}>Somar</button>

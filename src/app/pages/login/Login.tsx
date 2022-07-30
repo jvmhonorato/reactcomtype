@@ -1,5 +1,6 @@
-import { useCallback, useRef } from "react"
-import { useState, useEffect, useMemo } from "react"
+import { useCallback, useContext, useRef } from "react"
+import { useState, useMemo } from "react"
+import { UserLogContext } from "../../shared/contexts/UserLog"
 import { ButtonLogin } from "./components/ButtonLogin"
 import { InputLogin } from "./components/InputLogin"
 
@@ -8,6 +9,7 @@ import { InputLogin } from "./components/InputLogin"
 export const Login = () => {
     //vou entanciar o valor 
 const inputPasswordRef = useRef<HTMLInputElement>(null)
+const {userName} = useContext(UserLogContext)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -32,6 +34,7 @@ const inputPasswordRef = useRef<HTMLInputElement>(null)
     <>
     <div>
         <form>
+            <p>{userName}</p>
          <p>Quantidade de caracteres do email: {emailLength}</p>
          <InputLogin
          

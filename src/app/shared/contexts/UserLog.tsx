@@ -6,7 +6,7 @@ interface IUserLogContextData{
     
 }
 // criei o as IUserLogContextData como um hack pra o objeto não ficar vazio
-const UserLogContext = createContext<IUserLogContextData>({} as IUserLogContextData);
+export const UserLogContext = createContext<IUserLogContextData>({} as IUserLogContextData);
 
 interface IUserLogProviderProps {
     children: React.ReactNode;
@@ -15,7 +15,7 @@ interface IUserLogProviderProps {
 export const UserLogProvider: React.FC<IUserLogProviderProps> = ({children}) => {
     return (
         /* o value é obrigatório */
-        <UserLogContext.Provider value={{userName: 'Victor'}}>
+        <UserLogContext.Provider value={{ userName: 'Victor' }}>
                 {children}
         </UserLogContext.Provider>
     )
