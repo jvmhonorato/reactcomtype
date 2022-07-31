@@ -9,7 +9,7 @@ import { InputLogin } from "./components/InputLogin"
 export const Login = () => {
     //vou entanciar o valor 
 const inputPasswordRef = useRef<HTMLInputElement>(null)
-const {userName} = useContext(UserLogContext)
+const {userName, logout} = useContext(UserLogContext)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

@@ -78,3 +78,5 @@ faço o mesmo processo no componente Login importo o modulo useContext, depois i
 
 19: Na pasta hooks criei o arquivo UseUserLogged.ts dentro dele criei uma lógica   pra que eu possa importar apenas o hook useUserLogged pra usar o hook useContext depois no index.ts da pasta hook eu dou um export * from './UseUserLogged' depois apliquei o ovo modelo no componente de buttonLogin.tsx apaguei o import de useContext e o import de useLogContext e add o import 
 import { useUserLogged } pois ele ja contempla os elementos useCreate e o elementos que tem no componente UserLog.tsx
+
+20: Em UserLog.tsx adicionamos um novo elemento a interface o "logout" o mesmo recebe uma função  void na interface, e no return adicionar o logout ao lado de userName pra o valor de logout cria uma função entanciando o callback e adiciona ela como valor de logout, depois  em Dashboard chamei ela no useContext e atribuiela ao evento onClick no <button> inserir um console.log pra ver se a funçaõ é ativada quando o botão é acionado
