@@ -75,3 +75,6 @@ faço o mesmo processo no componente Login importo o modulo useContext, depois i
  const {userName} = useContext(UserLogContext)
   ao inves de assim: 
    const userLogContext = useContext(UserLogContext) e na chamada assim: <p>{userName}</p> ao invez de assim: <p>{userLogContext.userName}</p>
+
+19: Na pasta hooks criei o arquivo UseUserLogged.ts dentro dele criei uma lógica   pra que eu possa importar apenas o hook useUserLogged pra usar o hook useContext depois no index.ts da pasta hook eu dou um export * from './UseUserLogged' depois apliquei o ovo modelo no componente de buttonLogin.tsx apaguei o import de useContext e o import de useLogContext e add o import 
+import { useUserLogged } pois ele ja contempla os elementos useCreate e o elementos que tem no componente UserLog.tsx
