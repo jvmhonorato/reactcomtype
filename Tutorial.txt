@@ -84,3 +84,6 @@ import { useUserLogged } pois ele ja contempla os elementos useCreate e o elemen
 21:Resfatorei o component Dashboard.tsx criei um state list , setListvdepois criei uma <ul> e  chamei o {list.map()}retonrando  <li> no typescript deve se atentra a passar parãmetros obrigatorios pra que o codigo reconheça o {list.map((value, index)=> {return <li><{value}/li>})} desse jeito os valores passados no array do useState retornam
 
 22: criei um <input onKeyDown={}/> com uma função dentro do evento essa função criei entanciando um callBack e dentro do callback inserir condicionais pra tratar os dados e inpedir valores repetidos ao inserir valores no input
+
+23:Ainda na criação de lista no arquivo Dashboard.tsx vamos refatorar o código criar primeiramente cria-se uma interface IListItem e chama ela no usestate no lugar de string e remove os valores que estão pre determinados no array insiro na interface title; string e isselected boolean
+no lugar de value no .map() crio um novo parâmetro	o listItem e return o ListItem.title no return, refatorei o codigo pra inserir um checkbox na lista inserindo suas condicionais pra que retorne o numero de quadrados com check a cada marcação
