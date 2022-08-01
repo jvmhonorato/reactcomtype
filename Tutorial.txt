@@ -80,3 +80,7 @@ faço o mesmo processo no componente Login importo o modulo useContext, depois i
 import { useUserLogged } pois ele ja contempla os elementos useCreate e o elementos que tem no componente UserLog.tsx
 
 20: Em UserLog.tsx adicionamos um novo elemento a interface o "logout" o mesmo recebe uma função  void na interface, e no return adicionar o logout ao lado de userName pra o valor de logout cria uma função entanciando o callback e adiciona ela como valor de logout, depois  em Dashboard chamei ela no useContext e atribuiela ao evento onClick no <button> inserir um console.log pra ver se a funçaõ é ativada quando o botão é acionado
+
+21:Resfatorei o component Dashboard.tsx criei um state list , setListvdepois criei uma <ul> e  chamei o {list.map()}retonrando  <li> no typescript deve se atentra a passar parãmetros obrigatorios pra que o codigo reconheça o {list.map((value, index)=> {return <li><{value}/li>})} desse jeito os valores passados no array do useState retornam
+
+22: criei um <input onKeyDown={}/> com uma função dentro do evento essa função criei entanciando um callBack e dentro do callback inserir condicionais pra tratar os dados e inpedir valores repetidos ao inserir valores no input

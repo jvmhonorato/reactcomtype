@@ -1,27 +1,49 @@
 
-import { useContext, useRef } from "react"
-import { Link } from "react-router-dom"
+import { useCallback } from "react"
+import { useState } from "react"
 
-import { UserLogContext } from "../../shared/contexts/UserLog"
+
+
 
 
 
 
 export const Dashboard = () => {
-    const counterRef = useRef({counter: 0})
+    const [list, setList] = useState<string[]>(['teste 1','teste 2','teste 3'])
+
+    const handleInputKeyDown:React.KeyboardEventHandler<HTMLInputElement> = useCallback((e)=> {
+        if (e.key ==='Enter'){
+           
+           if(e.currentTarget.value.trim().length === 0) return
+
+           const value = e.currentTarget.value;
+           //pra limpar
+           e.currentTarget.value = ''
+
+           //setList([...list, e.currentTarget.value]) com depêndecia
+           setList((oldList) => {
+            //condicional pra tratar caso ja haja valor inserido
+            if (oldList.includes(value)) return oldList
+
+            return [...oldList, value]
+           })
+        }
+    },[])
+    
 
 
-    const {userName, logout} = useContext(UserLogContext)
+    
     return (<div>
-        <h1>Dashboard</h1>
-        <p>{userName}</p>
-        <p>Contador: {counterRef.current.counter}</p>
-
-        <button onClick={() => counterRef.current.counter++}>Somar</button>
-        <button onClick={() =>console.log(counterRef.current.counter)}>Somar</button>
-        <button onClick={logout}>Logout</button>
+        <h1>Lista</h1>
+        <input
+        onKeyDown={handleInputKeyDown}/>
+        <ul>
+        {list.map((value, index) => {
+            return <li key={value}>{value}</li>;
+        })}
+        </ul>
         
-        <Link to="/login">Login</Link>
+        
     </div>
         
     )
